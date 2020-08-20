@@ -1,6 +1,6 @@
 # CircularDeterminatePB
 A custom progressbar programmed to animate onclik.
-Here's a look at the custom progressbar xml:
+Here's a look at the custom progressbar ```circle.xml```:
 ```xml 
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
@@ -29,4 +29,19 @@ Here's a look at the custom progressbar xml:
         </rotate>
     </item>
 </layer-list>
+```
+Add this to your ```styles.xml``` file:
+```xml
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circle</item>
+    </style>
 ```
